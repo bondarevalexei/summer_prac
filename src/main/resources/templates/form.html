@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Phone Book</title>
+</head>
+<body>
+<h1>Add a Phone Book Entry</h1>
+<form th:action="@{/add}" th:object="${phoneBookEntry}" method="post">
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" th:field="*{lastName}" required><br>
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="text" id="phoneNumber" th:field="*{phoneNumber}" required><br>
+    <button type="submit">Add</button>
+</form>
+</body>
+</html>

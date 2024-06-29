@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiply Result</title>
+</head>
+<body>
+<h1>Multiply Result</h1>
+<h2 id="result"></h2>
+
+<script>
+    const resultElement = document.getElementById('result');
+
+    let params = (new URL(document.location)).searchParams;
+
+    resultElement.textContent = `The result is: ${params.get("res")}`;
+</script>
+</body>
+</html>

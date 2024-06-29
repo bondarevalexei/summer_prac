@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+    <script th:src="@{/js/validation.js}"></script>
+</head>
+<body>
+<h1>Register</h1>
+<form th:action="@{/register}" th:object="${user}" method="post" onsubmit="return validateRegisterForm()">
+    <div>
+        <label>Username:</label>
+        <input type="text" th:field="*{username}" id="username" />
+        <div th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></div>
+        <div th:if="${usernameError}" th:text="${usernameError}"></div>
+        <div id="usernameError" style="color:red;"></div>
+    </div>
+    <div>
+        <label>Email:</label>
+        <input type="email" th:field="*{email}" id="email" />
+        <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+        <div id="emailError" style="color:red;"></div>
+    </div>
+    <div>
+        <label>Password:</label>
+        <input type="password" th:field="*{password}" id="password" />
+        <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
+        <div id="passwordError" style="color:red;"></div>
+    </div>
+    <div>
+        <button type="submit">Register</button>
+    </div>
+</form>
+<div th:if="${successMessage}" th:text="${successMessage}"></div>
+</body>
+</html>
