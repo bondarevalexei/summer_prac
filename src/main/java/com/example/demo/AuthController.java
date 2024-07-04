@@ -1,28 +1,26 @@
 package com.example.demo;
 
+import com.example.demo.model.VerificationToken;
 import com.example.demo.repository.User;
+import com.example.demo.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.AuthenticationException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
+import java.time.LocalDateTime;
 
 @Controller
 public class AuthController {
 
     @Autowired
     private UserService userService;
-
-    @Autowired
-    private AuthenticationManager authenticationManager;
 
     @GetMapping("/register")
     public String showRegistrationForm(Model model) {
@@ -42,31 +40,40 @@ public class AuthController {
         }
 
         userService.save(user);
-        return "redirect:/login";
+        return "redirect:/login?message=Please check your email for a confirmation link.";
     }
 
     @GetMapping("/login")
-    public String showLoginForm() {
+    public String showLoginForm(HttpServletRequest request, Model model) {
+        String error = request.getParameter("error");
+        if (error != null) {
+            model.addAttribute("loginError", "Invalid username or password.");
+        }
+        String message = request.getParameter("message");
+        if (message != null) {
+            model.addAttribute("loginMessage", message);
+        }
         return "login";
     }
 
-    @PostMapping("/login")
-    public String loginUser(@ModelAttribute("username") String username,
-                            @ModelAttribute("password") String password,
-                            Model model) {
-        System.out.println(username);
-        System.out.println(password);
-
-        try {
-            Authentication authentication = authenticationManager.authenticate(
-                    new UsernamePasswordAuthenticationToken(username, password)
-            );
-            // Если аутентификация успешна, перенаправляем на домашнюю страницу
-            return "redirect:/";
-        } catch (AuthenticationException e) {
-            // Если аутентификация неудачна, возвращаемся на страницу входа с сообщением об ошибке
-            model.addAttribute("loginError", "Invalid username or password.");
-            return "login";
+    @GetMapping("/confirm")
+    public String confirmRegistration(@RequestParam("token") String token, Model model) {
+        VerificationToken verificationToken = userService.getVerificationToken(token);
+        if (verificationToken == null) {
+            model.addAttribute("message", "Invalid token.");
+            return "error";
         }
+
+        User user = verificationToken.getUser();
+        if (verificationToken.getExpiryDate().isBefore(LocalDateTime.now())) {
+            model.addAttribute("message", "Token has expired.");
+            return "error";
+        }
+
+        user.setEnabled(true);
+        userService.update(user);  // Используем метод update вместо save
+
+        model.addAttribute("message", "Your account has been confirmed. You can now log in.");
+        return "login";
     }
 }

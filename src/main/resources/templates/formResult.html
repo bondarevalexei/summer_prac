@@ -18,6 +18,10 @@
         <td th:text="${entry.id}">ID</td>
         <td th:text="${entry.lastName}">Last Name</td>
         <td th:text="${entry.phoneNumber}">Phone Number</td>
+        <td>
+            <a th:href="@{/edit/{id}(id=${entry.id})}">Edit</a> |
+            <a th:href="@{/delete/{id}(id=${entry.id})}">Delete</a>
+        </td>
     </tr>
     </tbody>
 </table>

@@ -6,6 +6,10 @@ h1 {
     text-align: center;
 }
 
+p {
+    color: red;
+}
+
 form {
     max-width: 400px;
     margin: 0 auto;

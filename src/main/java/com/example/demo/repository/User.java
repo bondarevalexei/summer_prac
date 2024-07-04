@@ -28,6 +28,16 @@ public class User {
     @Size(min = 6, message = "Password must be at least 6 characters")
     private String password;
 
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    private boolean enabled;
+
     // Getters and setters
     public String getUsername() {
         return username;

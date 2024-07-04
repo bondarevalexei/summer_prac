@@ -30,5 +30,10 @@ public class IndexController {
         return "multres";
     }
 
+    @GetMapping("/uploadFile")
+    public String uploadFile() {
+        logger.info("upload page was open!");
 
+        return "uploadMedia";
+    }
 }

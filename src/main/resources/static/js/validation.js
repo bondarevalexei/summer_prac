@@ -39,3 +39,33 @@ function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
 }
+
+function validateLoginForm() {
+    let valid = true;
+
+    // Получаем значения полей
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Получаем элементы для отображения ошибок
+    const usernameError = document.getElementById('usernameError');
+    const passwordError = document.getElementById('passwordError');
+
+    // Сброс сообщений об ошибках
+    usernameError.textContent = '';
+    passwordError.textContent = '';
+
+    // Проверка длины имени пользователя
+    if (username.length < 4) {
+        usernameError.textContent = 'Username must be at least 4 characters long';
+        valid = false;
+    }
+
+    // Проверка длины пароля
+    if (password.length < 8) {
+        passwordError.textContent = 'Password must be at least 8 characters long';
+        valid = false;
+    }
+
+    return valid;
+}
