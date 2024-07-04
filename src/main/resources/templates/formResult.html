@@ -11,10 +11,11 @@
         <th>ID</th>
         <th>Last Name</th>
         <th>Phone Number</th>
+        <th>Actions</th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="entry : ${entries}">
+    <tr th:each="entry : ${entryPage.content}">
         <td th:text="${entry.id}">ID</td>
         <td th:text="${entry.lastName}">Last Name</td>
         <td th:text="${entry.phoneNumber}">Phone Number</td>
@@ -25,6 +26,16 @@
     </tr>
     </tbody>
 </table>
+
+<div>
+    <span th:if="${entryPage.hasPrevious()}">
+        <a th:href="@{/formResult(page=${entryPage.number - 1})}">Previous</a>
+    </span>
+    <span th:if="${entryPage.hasNext()}">
+        <a th:href="@{/formResult(page=${entryPage.number + 1})}">Next</a>
+    </span>
+</div>
+
 <a href="/dbForm">Add Another Entry</a>
 </body>
 </html>
