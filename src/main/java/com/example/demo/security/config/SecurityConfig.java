@@ -1,5 +1,6 @@
-package com.example.demo;
+package com.example.demo.security.config;
 
+import com.example.demo.service.impl.UserDetailsServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -19,9 +20,13 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
+                .userDetailsService(userDetailsService)
                 .authorizeHttpRequests(authorizeRequests ->
                         authorizeRequests
                                 .requestMatchers("/register", "/login", "/confirm", "/css/**", "/js/**").permitAll()
+                                .requestMatchers("/viewClients", "/orderList", "/viewServices", "/confirmOrder/{id}", "/rejectOrder/{id}",
+                                        "/scheduleOrder/{id}", "/createInvoice/{id}", "/editClient/{id}", "/deleteClient/{id}",
+                                            "/addService", "/editService/{id}", "/deleteService/{id}").hasRole("ADMIN")
                                 .anyRequest().authenticated()
                 )
                 .formLogin(formLogin ->

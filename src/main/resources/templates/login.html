@@ -19,12 +19,16 @@
         <input type="password" id="password" name="password" required minlength="8">
         <div id="passwordError" style="color:red"></div>
     </div>
-    <div>
+    <div style="display: flex; flex-direction: row; gap: 20px; justify-content: end">
         <button type="submit">Login</button>
     </div>
     <div th:if="${loginError}">
         <p style="color:red" th:text="${loginError}"></p>
     </div>
+</form>
+<form th:action="@{/register}" method="get" style="display: flex; flex-direction: row; justify-content: space-between; border: none; align-items: center">
+    <span>Doesn't have an account?</span>
+    <button type="submit">Registration</button>
 </form>
 </body>
 </html>

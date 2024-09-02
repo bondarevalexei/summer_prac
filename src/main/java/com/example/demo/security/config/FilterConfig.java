@@ -1,7 +1,7 @@
-package com.example.demo.config;
+package com.example.demo.security.config;
 
-import com.example.demo.filter.AuthenticationFilter;
-import com.example.demo.filter.EncodingFilter;
+import com.example.demo.security.filter.AuthenticationFilter;
+import com.example.demo.security.filter.EncodingFilter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package com.example.demo.listeners;
+package com.example.demo.events.listeners;
 
 import com.example.demo.events.UserActionEvent;
 import org.springframework.context.event.EventListener;

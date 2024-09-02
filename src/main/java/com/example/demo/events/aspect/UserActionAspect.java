@@ -1,4 +1,4 @@
-package com.example.demo.aspect;
+package com.example.demo.events.aspect;
 
 import com.example.demo.events.UserActionEvent;
 import org.aspectj.lang.annotation.After;

@@ -1,7 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.model.VerificationToken;
-import com.example.demo.repository.User;
+import com.example.demo.model.User;
 import com.example.demo.repository.VerificationTokenRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

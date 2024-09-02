@@ -31,6 +31,9 @@
         <button type="submit">Register</button>
     </div>
 </form>
-<div th:if="${successMessage}" th:text="${successMessage}"></div>
+<form th:action="@{/login}" method="get" style="display: flex; flex-direction: row; justify-content: space-between; border: none; align-items: center">
+    <span>Also have an account?</span>
+    <button type="submit">Login</button>
+</form>
 </body>
 </html>

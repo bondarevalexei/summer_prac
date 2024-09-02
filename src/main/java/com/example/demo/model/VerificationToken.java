@@ -2,7 +2,6 @@ package com.example.demo.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
-import com.example.demo.repository.User;
 
 @Entity
 public class VerificationToken {

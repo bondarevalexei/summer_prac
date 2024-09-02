@@ -2216,3 +2216,90 @@ com.example.demo.IndexController#index() mapped.
 2024-06-28 14:14:38.116 [SpringApplicationShutdownHook] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-06-28 14:14:38.120 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2024-06-28 14:14:38.132 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-30 11:51:29.693 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-08-30 11:51:29.732 [main] INFO  com.example.demo.Demo1Application - Starting Demo1Application using Java 21.0.2 with PID 13244 (C:\Users\gtrom\Downloads\Telegram Desktop\summer_project\demo1\target\classes started by gtrom in C:\Users\gtrom\Downloads\Telegram Desktop\summer_project\demo1)
+2024-08-30 11:51:29.735 [main] INFO  com.example.demo.Demo1Application - No active profile set, falling back to 1 default profile: "default"
+2024-08-30 11:51:30.499 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-30 11:51:30.586 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 80 ms. Found 6 JPA repository interfaces.
+2024-08-30 11:51:31.352 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-30 11:51:31.369 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-30 11:51:31.371 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-30 11:51:31.371 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-08-30 11:51:31.434 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-30 11:51:31.435 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1656 ms
+2024-08-30 11:51:31.639 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-30 11:51:31.731 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-08-30 11:51:31.783 [main] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-30 11:51:32.104 [main] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-30 11:51:32.143 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-30 11:51:32.559 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2cacb445
+2024-08-30 11:51:32.560 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-30 11:51:33.851 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-30 11:51:33.970 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-30 11:51:34.708 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-30 11:51:34.906 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2024-08-30 11:51:35.170 [main] INFO  org.springframework.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@14237e5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@33ed6546, org.springframework.security.web.context.SecurityContextHolderFilter@5ed1bc4f, org.springframework.security.web.header.HeaderWriterFilter@4ebe6c24, org.springframework.web.filter.CorsFilter@54d62c35, org.springframework.security.web.csrf.CsrfFilter@37351baa, org.springframework.security.web.authentication.logout.LogoutFilter@503b5337, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@d20e900, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@753248f8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@71a509c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5eb4b746, org.springframework.security.web.access.ExceptionTranslationFilter@461c0572, org.springframework.security.web.access.intercept.AuthorizationFilter@44046b0d]
+2024-08-30 11:51:35.604 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-08-30 11:51:35.628 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-08-30 11:51:35.635 [main] INFO  com.example.demo.Demo1Application - Started Demo1Application in 6.283 seconds (process running for 7.391)
+2024-08-30 12:06:01.059 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m28s280ms492µs700ns).
+2024-08-30 12:14:48.796 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m17s648ms177µs400ns).
+2024-08-30 12:16:34.773 [SpringApplicationShutdownHook] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-30 12:16:34.794 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-30 12:16:34.824 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-30 15:40:45.018 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-08-30 15:40:45.089 [main] INFO  com.example.demo.Demo1Application - Starting Demo1Application using Java 21.0.2 with PID 4904 (C:\Users\gtrom\Downloads\Telegram Desktop\summer_project\demo1\target\classes started by gtrom in C:\Users\gtrom\Downloads\Telegram Desktop\summer_project\demo1)
+2024-08-30 15:40:45.092 [main] INFO  com.example.demo.Demo1Application - No active profile set, falling back to 1 default profile: "default"
+2024-08-30 15:40:46.365 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-30 15:40:46.501 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 118 ms. Found 6 JPA repository interfaces.
+2024-08-30 15:40:47.855 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-30 15:40:47.873 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-30 15:40:47.873 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-30 15:40:47.873 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-08-30 15:40:47.974 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-30 15:40:47.974 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2818 ms
+2024-08-30 15:40:48.274 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-30 15:40:48.398 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-08-30 15:40:48.460 [main] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-30 15:40:48.927 [main] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-30 15:40:48.990 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-30 15:40:49.725 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@76220ef1
+2024-08-30 15:40:49.725 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-30 15:40:51.997 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-30 15:40:52.191 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-30 15:40:53.381 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-30 15:40:53.669 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2024-08-30 15:40:54.342 [main] INFO  org.springframework.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2e94655a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@49868df8, org.springframework.security.web.context.SecurityContextHolderFilter@611f28f5, org.springframework.security.web.header.HeaderWriterFilter@5b784f16, org.springframework.web.filter.CorsFilter@1ccdbae4, org.springframework.security.web.csrf.CsrfFilter@303a484e, org.springframework.security.web.authentication.logout.LogoutFilter@1444e35f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@547aa7f4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@78907a46, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4290fcd7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1d09fb8e, org.springframework.security.web.access.ExceptionTranslationFilter@5b04224a, org.springframework.security.web.access.intercept.AuthorizationFilter@71a509c]
+2024-08-30 15:40:54.990 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-08-30 15:40:55.041 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-08-30 15:40:55.057 [main] INFO  com.example.demo.Demo1Application - Started Demo1Application in 10.563 seconds (process running for 12.703)
+2024-08-30 15:40:55.250 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-30 15:40:55.250 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-08-30 15:40:55.254 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2024-08-30 15:40:55.316 [http-nio-8080-exec-1] INFO  com.example.demo.security.filter.EncodingFilter - EncodingFilter: Request URI is 0:0:0:0:0:0:0:1
+2024-08-30 15:40:55.316 [http-nio-8080-exec-1] INFO  com.example.demo.security.filter.EncodingFilter - EncodingFilter applied successfully
+2024-08-30 15:40:56.373 [http-nio-8080-exec-6] INFO  com.example.demo.security.filter.EncodingFilter - EncodingFilter: Request URI is 0:0:0:0:0:0:0:1
+2024-08-30 15:40:56.373 [http-nio-8080-exec-6] INFO  com.example.demo.security.filter.EncodingFilter - EncodingFilter applied successfully
+2024-08-30 15:41:15.823 [http-nio-8080-exec-5] INFO  com.example.demo.security.filter.EncodingFilter - EncodingFilter: Request URI is 0:0:0:0:0:0:0:1
+2024-08-30 15:41:15.823 [http-nio-8080-exec-5] INFO  com.example.demo.security.filter.EncodingFilter - EncodingFilter applied successfully
+2024-08-30 15:41:19.327 [http-nio-8080-exec-10] INFO  com.example.demo.security.filter.EncodingFilter - EncodingFilter: Request URI is 0:0:0:0:0:0:0:1
+2024-08-30 15:41:19.327 [http-nio-8080-exec-10] INFO  com.example.demo.security.filter.EncodingFilter - EncodingFilter applied successfully
+2024-08-30 15:41:19.391 [http-nio-8080-exec-2] INFO  com.example.demo.security.filter.EncodingFilter - EncodingFilter: Request URI is 0:0:0:0:0:0:0:1
+2024-08-30 15:41:19.391 [http-nio-8080-exec-2] INFO  com.example.demo.security.filter.EncodingFilter - EncodingFilter applied successfully
+2024-08-30 15:41:31.442 [http-nio-8080-exec-5] INFO  com.example.demo.security.filter.EncodingFilter - EncodingFilter: Request URI is 0:0:0:0:0:0:0:1
+2024-08-30 15:41:31.442 [http-nio-8080-exec-5] INFO  com.example.demo.security.filter.EncodingFilter - EncodingFilter applied successfully
+2024-08-30 15:41:31.454 [http-nio-8080-exec-5] INFO  com.example.demo.controller.IndexController - User accessed the index page.
+2024-08-30 15:42:31.968 [http-nio-8080-exec-3] INFO  com.example.demo.security.filter.EncodingFilter - EncodingFilter: Request URI is 127.0.0.1
+2024-08-30 15:42:31.968 [http-nio-8080-exec-3] INFO  com.example.demo.security.filter.EncodingFilter - EncodingFilter applied successfully
+2024-08-30 15:42:35.158 [http-nio-8080-exec-9] INFO  com.example.demo.security.filter.EncodingFilter - EncodingFilter: Request URI is 127.0.0.1
+2024-08-30 15:42:35.158 [http-nio-8080-exec-9] INFO  com.example.demo.security.filter.EncodingFilter - EncodingFilter applied successfully
+2024-08-30 15:42:35.345 [http-nio-8080-exec-4] INFO  com.example.demo.security.filter.EncodingFilter - EncodingFilter: Request URI is 127.0.0.1
+2024-08-30 15:42:35.354 [http-nio-8080-exec-4] INFO  com.example.demo.security.filter.EncodingFilter - EncodingFilter applied successfully
+2024-08-30 15:42:44.958 [http-nio-8080-exec-2] INFO  com.example.demo.security.filter.EncodingFilter - EncodingFilter: Request URI is 127.0.0.1
+2024-08-30 15:42:44.958 [http-nio-8080-exec-2] INFO  com.example.demo.security.filter.EncodingFilter - EncodingFilter applied successfully
+2024-08-30 15:42:44.958 [http-nio-8080-exec-2] INFO  com.example.demo.controller.IndexController - Admin accessed the order list page.
+2024-08-30 15:45:53.069 [http-nio-8080-exec-2] INFO  com.example.demo.security.filter.EncodingFilter - EncodingFilter: Request URI is 127.0.0.1
+2024-08-30 15:45:53.069 [http-nio-8080-exec-2] INFO  com.example.demo.security.filter.EncodingFilter - EncodingFilter applied successfully
+2024-08-30 15:48:54.743 [SpringApplicationShutdownHook] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-30 15:48:54.746 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-30 15:48:54.760 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
